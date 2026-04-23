@@ -2,7 +2,7 @@ import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
 import { generateObject, generateText } from 'ai';
 import { z } from 'zod';
 
-const INTERACTION_ID_HEADER = 'X-Interaction-Id';
+const INTERACTION_ID_HEADER = 'X-Interaction-Id'; // used in request and forwarded to LLM
 
 export default {
 	async fetch(request: Request, env: Env): Promise<Response> {
